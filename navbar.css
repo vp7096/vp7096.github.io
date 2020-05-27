@@ -1,0 +1,26 @@
+.class2{
+			border-spacing: 10px;
+			width: 100%;
+			text-align: center;
+			border-style: groove;
+			background-color: black;
+			color: white;
+			border : none;
+			height: 3em;
+			font-weight: bold;
+		}
+		.navbar{
+
+			background-color: black;
+			color: white;
+			text-decoration: none;
+		}
+		td:hover{
+			box-shadow: 5px 5px 5px lightgrey;
+		}
+
+		a:hover{
+			color: white;
+			text-decoration: none;
+		}
+		

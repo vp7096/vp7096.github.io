@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>covid19gujarat</title>
+
+
+
+	<meta charset="utf-8" content="Gujarat District wise updated data of covid19 Pandemic (Coronavirus).Live data of covid19 Gujarat cases.Latest Information.">
+
+	<meta name="Covid19Gujarat Update. Coronavirus tracker. ArticleSpyder.com"charset="utf-8" content="Gujarat District wise updated data of covid19 Pandemic (Coronavirus).Live data of covid19 Gujarat cases.Latest Information.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="navbar.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+ 
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162676067-3"></script>
+
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-162676067-3');
+  </script>
+
+  <style type="text/css">
+    #tab{border-collapse: collapse;
+      align-content: center;
+      font-weight:bold;
+        }
+
+    #tab tr:nth-child(even){background-color: #f2f2f2;}
+    #tab tr:hover {background-color: #ddd;}
+    #tab th {padding-top: 12px;padding-bottom: 12px;background-color: orange;color: white;}
+
+    .first{background-color: lightblue;
+      font-weight:bold;
+      color: black;
+         }
+
+    .safe{
+          background-color: lightgreen;
+         }
+
+    input:hover{
+          background-color: blue;
+         }
+         a:hover{
+          color: white;
+          text-decoration: none;
+         }
+    </style>
+
+
+
+    <script type="text/javascript">
+
+          // Load the Visualization API and the piechart package.
+          google.load('visualization', '1.0', {'packages':['corechart']}); 
+
+          // Set a callback to run when the Google Visualization API is loaded.
+          google.setOnLoadCallback(drawChart);
+
+          // Callback that creates and populates a data table,
+          // instantiates the pie chart, passes in the data and
+          // draws it.
+          function drawChart() {
+
+            // Create the data table.
+            var data = google.visualization.arrayToDataTable([
+              ['Date', 'Cases',{ role: 'annotation' }],
+              ['19/03',2,'2'],
+              ['20/03',5,'5'],
+              ['21/03',6,'6'],
+              ['22/03',6,'6'],
+              ['23/03',15,'15'],
+              ['24/03',5,'5'],
+              ['25/03',3,'3'],
+              ['26/03',6,'6'],
+              ['27/03',5,'5'],
+              ['28/03',5,'5'],
+              ['29/03',5,'5'],
+              ['30/03',6,'6'],
+              ['31/03',4,'4'],
+              ['01/04',9,'9'],
+              ['02/04',5,'5'],
+              ['03/04',8,'8'],
+              ['04/04',17,'17'],
+              ['05/04',22,'22'],
+              ['06/04',27,'27'],
+              ['07/04',25,'25'],
+              ['08/04',76,'76'],
+              ['09/04',46,'46'],
+              ['10/04',124,'124'],
+              ['11/04',61,'61'],
+              ['12/04',45,'45'],
+              ['13/04',79,'79'],
+              ['14/04',78,'78'],
+              ['15/04',176,'176'],
+              ['16/04',150,'150'],
+              ['17/04',251,'251'],
+              ['18/04',332,'332'],
+              ['19/04',247,'247'],
+              ['20/04',215,'215'],
+              ['21/04',206,'206'],
+              ['22/04',229,'135'],
+              ['23/04',217,'217'],
+
+        ]);
+
+
+            var data2 = new google.visualization.DataTable();
+            data2.addColumn('string', 'Districts');
+            data2.addColumn('number', 'Active Cases');
+            data2.addRows([
+              ['Ahmedabad', 1821],
+            
+              ['Surat', 462],
+              ['Vadodara', 223],
+              ['Rajkot', 41],
+             
+              ['Other',268]
+            ]);
+          
+
+            var data3 = new google.visualization.DataTable();
+            data3.addColumn('string', 'Date');
+            data3.addColumn('number', 'New Cases');
+           
+            data3.addRows([
+               ['19/03',2],
+              ['20/03',5],
+              ['21/03',6],
+              ['22/03',6],
+              ['23/03',15],
+              ['24/03',5],
+              ['25/03',3],
+              ['26/03',6],
+              ['27/03',5],
+              ['28/03',5],
+              ['29/03',5],
+              ['30/03',6],
+              ['31/03',4],
+              ['01/04',9],
+              ['02/04',5],
+              ['03/04',8],
+              ['04/04',17],
+              ['05/04',22],
+              ['06/04',27],
+              ['07/04',25],
+              ['08/04',76],
+              ['09/04',46],
+              ['10/04',124],
+              ['11/04',61],
+              ['12/04',45],
+              ['13/04',79],
+              ['14/04',78],
+              ['15/04',176],
+              ['16/04',150],
+              ['17/04',251],
+              ['18/04',332],
+              ['19/04',247],
+              ['20/04',215],
+              ['21/04',206],
+              ['22/04',135],
+              ['23/04',217],
+             
+            ]);
+
+            var options = {'title':'Covid19 Cases each Day',
+                           'width':350,
+                           'height':800,
+                           'font-weight':25,
+                         };
+
+
+            var options2 = {'title':'PieChart of Active Cases',
+                           'width':350,
+                           'height':500,pieHole: 0.2,slices: {  
+      1: {offset: 0.2},
+      3: {offset: 0.3}                  
+   }};
+        
+
+           var options3 = {'title' : 'LineChart of Daily Cases',
+               hAxis: {
+                  title: 'Date'
+               },
+               vAxis: {
+                  title: 'Cases'
+               },   
+               'width':350,
+               'height':500   
+            };
+
+            var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+            var chart2 = new google.visualization.PieChart(document.getElementById('chart_div2'));
+            chart2.draw(data2, options2);
+             var chart3 = new google.visualization.LineChart(document.getElementById('chart_div3'));
+            chart3.draw(data3, options3);
+          }
+        </script>
+</head>
+<body>
+
+<div class="navbar" style="background-color: black;">
+  <table class="class2">
+    <tr>
+      <td width="20%" style="font-size: 25px;">COVID19</td>
+      <td><a href="index.html">Home</a></td>
+      <td><a href="news.html">News</a></td>
+      <td><a href="research.html">Research</a></td>
+      <td><a href="GujaratDashboard.html">GujaratDashboard</a></td>
+      <td><a href="history.html">History</a></td>
+      <td><a href="aboutus.html">About Us</a></td>
+      <td><a href="contactus.html">Contact Us</a></td>
+    </tr>
+  </table>
+</div>
+
+<br>
+
+
+<div class="alert alert-primary" role="alert" align="center">
+  Last updated on 27/05/20 09:00AM IST
+</div>
+<div class="alert alert-danger" role="alert" align="center">
+  Note: This data is just for practice purpose.
+</div>
+
+<div align="center"><table align="center" cellspacing="8px" cellpadding="8px"><tr><td><h1>Covid19Gujarat</h1></td></tr><tr align="center"><td>Coronavirus Pandemic (महामारी)</td></tr></table></div><br>
+
+
+<div align="center"><form>Click Here..
+<input TYPE="button" onClick="history.go(0)" id="button" VALUE="Refresh Data" style="width: 200px;height: 50px;">
+</form></div><br>
+<div align="center" style="padding-left: 10px; padding-right: 10px;"><table><tr><td><div class="card text-white bg-info mb-3" style="max-width: 8rem; max-height: 10rem; font-size: 18px;">
+  <div class="card-header" style="max-height: 4rem;" align="center" >Total Cases</div>
+  <div class="card-body" style="max-height: 5rem;" align="center">
+    <h5 class="card-title" align="center"><font style="color: red; font-size: 18px">+191</font> 2815</h5>
+  </div>
+</div></td><td><div class="card text-white bg-success mb-3" style="max-width: 8rem; max-height: 10rem; font-size: 18px;">
+  <div class="card-header" style="max-height: 4rem;" align="center">Total Recovered</div>
+  <div class="card-body" style="max-height: 4rem;" align="center">
+    <h5 class="card-title" align="center"><font style="color: red; font-size: 18px">+7</font>265</h5>
+  </div>
+</div></td><td><div class="card text-white bg-dark mb-3" style="max-width: 8rem; max-height: 10rem; font-size: 18px;">
+  <div class="card-header" style="max-height: 4rem;" align="center" >Total Deaths</div>
+  <div class="card-body" style="max-height: 4rem;" align="center">
+    <h5 class="card-title" align="center"><font style="color: red">+15</font>127</h5>
+  </div>
+</div></td></tr></table></div>
+
+
+<div align="center" style="padding-left: 10px; padding-right: 10px;"><table cellspacing="8px" cellpadding="8px" align="center"><tr><td><div class="card text-white bg-secondary mb-3" style="max-width: 16rem; max-height: 10rem; font-size: 18px;">
+  <div class="card-header" style="max-height: 5rem;" align="center" >People Tested for COVID19</div>
+  <div class="card-body" style="max-height: 5rem;" align="center">
+    <h5 class="card-title" align="center">43822</h5>
+  </div>
+</div></td><td><div class="card text-white bg-danger mb-3" style="max-width: 8rem; max-height: 10rem; font-size: 18px;">
+  <div class="card-header" style="max-height: 4rem;" align="center" >Districts Affected</div>
+  <div class="card-body" style="max-height: 4rem;" align="center">
+    <h5 class="card-title" align="center">29</h5>
+  </div>
+</div></td></tr></table></div>
+
+
+
+<br>
+  <div align="center" style="padding-left: 10px; padding-right: 10px;">
+  <table border="1" id="tab" align="center"cellspacing="8px" cellpadding="8px">
+    
+    <tr align="center"><th>District</th><th>Total Cases</th><th>Recovered</th><th>Died</th></tr>
+    <tr align="center"><td>Ahmedabad</td><td><font style="color: red">+169</font> 1821</td><td><font style="color: green"></font> 113</td><td><font style="color: red">+14</font> 83</td></tr>
+    <tr align="center"><td>Anand</td><td><font style="color: red">+3</font> 36</td><td><font style="color: green">+4</font> 13</td><td>2</td></tr>
+    <tr align="center"><td>Aravalli</td><td><font style="color: red"></font> 18</td><td>0</td><td>1</td></tr>
+    <tr align="center"><td>Banaskantha</td><td><font style="color: red"></font> 16</td><td>1</td><td>0</td></tr>
+    <tr align="center"><td>Bharuch</td><td><font style="color: red"></font> 29</td><td>3</td><td>2</td></tr>
+    <tr align="center"><td>Bhavnagar</td><td><font style="color: red">+2</font> 35</td><td>18</td><td>5</td></tr>
+    <tr align="center"><td>Botad</td><td><font style="color: red">+1</font> 12</td><td>0</td><td>1</td></tr>
+    <tr align="center"><td>Chhota Udaipur</td><td><font style="color: red"></font> 11</td><td><font style="color: green"></font> 3</td><td>0</td></tr>
+    <tr align="center"><td>Dahod</td><td>4</td><td><font style="color: green">+1</font>1</td><td>0</td></tr>
+    <tr align="center"><td>Dang</td><td><font style="color: red"></font> 1</td><td>0</td><td>0</td></tr>
+    <tr align="center"><td>Gandhinagar</td><td><font style="color: red">+1</font> 19</td><td>11</td><td>2</td></tr>
+    <tr align="center"><td>Gir Somnath</td><td>3</td><td>2</td><td>0</td></tr>
+    <tr align="center" id="safe" style="background-color: lightgreen;"><td>Jamnagar</td><td>1</td><td>0</td><td>1</td></tr>
+    <tr align="center"><td>Kutch</td><td>6</td><td>1</td><td>1</td></tr>
+    <tr align="center"><td>Kheda</td><td><font style="color: red"></font> 5</td><td><font style="color: green"></font> 1</td><td>0</td></tr>
+    <tr align="center"><td>Mahisagar</td><td>9</td><td>0</td><td>0</td></tr>
+    <tr align="center"><td>Mehsana</td><td>7</td><td>2</td><td>0</td></tr>
+    <tr align="center"><td>Morbi</td><td>1</td><td>0</td><td>0</td></tr>
+    <tr align="center"><td>Narmada</td><td><font style="color: red"></font> 12</td><td>0</td><td>0</td></tr>
+    <tr align="center"><td>Navsari</td><td>1</td><td>0</td><td>2</td></tr>
+    <tr align="center"><td>Panchmahal</td><td><font style="color: red">+3</font> 15</td><td>0</td><td>2</td></tr>
+    <tr align="center"><td>Patan</td><td>15</td><td>11</td><td>1</td></tr>
+    <tr align="center" id="safe" style="background-color: lightgreen;"><td >Porbandar</td><td>3</td><td>3</td><td>0</td></tr>
+    <tr align="center"><td>Rajkot</td><td>41</td><td>12</td><td>0</td></tr>
+    <tr align="center"><td>Sabarkantha</td><td>3</td><td>2</td><td>0</td></tr>
+    <tr align="center"><td>Surat</td><td><font style="color: red">+6</font> 462</td><td><font style="color: green">+2</font>15</td><td><font style="color: red">+1</font> 14</td></tr>
+    <tr align="center"><td>Tapi</td><td>1</td><td>0</td><td>0</td></tr>
+    <tr align="center"><td>Vadodara</td><td><font style="color: red">+5</font> 223</td><td><font style="color: green"></font> 53</td><td><font style="color: red"></font> 11</td></tr>
+    <tr align="center"><td>Valsad</td><td><font style="color: red">+1</font> 5</td><td>0</td><td>1</td></tr>
+
+    <tr align="center" style="font-weight: bolder; color: rgb(0,0,128);"><td>Total</td><td><font style="color: red">+191</font> 2815</td><td><font style="color: green">+7</font> 265</td><td><font style="color: red">+15</font> 127</td></tr><tr align="right"><td colspan="4">*green districts does not have any active cases</td></tr>
+  </table></div>
+
+<div id="chart_div" align="center" style=" padding-left: 10px; padding-right: 10px;"></div>
+
+<div id="chart_div3" align="center" style=" padding-left: 10px; padding-right: 10px;"></div>
+
+
+<div align="center" style="width: 400; padding-left: 10px; padding-right: 10px;"><table cellspacing="8px" cellpadding="8px"  style="font-size: 20px; width: 350px;"><tr><td colspan="3" align="center" style="font-weight: bolder;">Testing analysis</td></tr><tr align="center" style="background-color: rgb(0,64,128);color: white;"><td>Total Tested</td><td>Positive</td><td>Negative</td></tr><tr align="center" style="font-weight: bolder;"><td>43822</td><td style="color: red;">2815</td><td style="color: green;">41007</td></tr></table></div><br>
+
+
+
+<div align="center" style="padding-left: 10px; padding-right: 10px;"><table cellspacing="8px" cellpadding="8px"  style="font-size: 20px;"><tr style="font-weight: bolder;"><td colspan="4">Age and Gender wise Death Analysis</td></tr><tr style="background-color: rgb(0,64,128);color: white;"><td>Age-Group</td><td>Male</td><td>Female</td><td>Total</td></tr>
+            <tr><td>0-10</td><td>1</td><td>0</td><td>1</td></tr>
+            <tr><td>11-20</td><td>0</td><td>3</td><td>3</td></tr>
+            <tr><td>21-40</td><td>5</td><td>4</td><td>9</td></tr>
+            <tr><td>41-60</td><td>31</td><td>25</td><td>56</td></tr>
+            <tr><td>60+</td><td>33</td><td>25</td><td>58</td></tr>
+            <tr style="font-weight: bolder;"><td>Total</td><td>70</td><td>57</td><td>127</td></tr></table></div>
+
+
+   <div id="chart_div2" align="center" style="padding-left: 10px; padding-right: 10px;"></div>
+
+
+<div align="center"><table ><tr><td><img src="images/covid19testing2.png" width="400px" height="200px"></td></tr></table></div>
+
+
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
